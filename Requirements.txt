@@ -1,9 +1,0 @@
-streamlit
-numpy
-pandas
-pandas_ta
-plotly
-python_dateutil
-scikit_learn
-ta
-yfinance
