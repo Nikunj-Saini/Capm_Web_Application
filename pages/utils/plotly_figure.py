@@ -1,9 +1,6 @@
 import plotly.graph_objects as go
 import dateutil
-import pandas_ta as ta
 import datetime
-
-import plotly.graph_objects as go
 
 def plotly_table(dataframe):
     headerColor = 'grey'
