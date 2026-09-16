@@ -1,540 +1,231 @@
-# CAPM Web Application
+# FinSight — Financial Analytics & Portfolio Intelligence Platform
 
-A comprehensive **Streamlit-based financial analytics platform** that combines **CAPM analysis, stock analysis, technical indicators, portfolio analytics, risk analysis, Monte Carlo simulation, and machine-learning-based stock price prediction** into an interactive dashboard.
+**FinSight** is an interactive financial analytics platform built with **Python and Streamlit** that combines stock market analysis, **CAPM**, technical indicators, portfolio analytics, risk analysis, Monte Carlo simulation, and interactive visualizations into a single dashboard.
 
----
+## Live Demo
 
-## Project Overview
+**FinSight:**
+https://capm-dashboard-nikunj.streamlit.app/
 
-The **CAPM Web Application** is a quantitative finance and stock analytics platform built with Python and Streamlit.
+## Overview
 
-It uses historical market data to calculate financial metrics, visualize stock performance, analyze risk and returns, perform portfolio analysis, and generate machine-learning-based price forecasts.
+FinSight provides an interactive environment for analyzing stocks and understanding the relationship between **risk, return, market performance, and portfolio behavior**.
 
-The application is designed for **financial analysis, quantitative research, and educational purposes**.
+The platform fetches historical market data and transforms it into actionable financial insights through statistical calculations, financial models, technical indicators, and interactive visualizations.
 
----
+## Features
 
-## Key Features
+### CAPM Analysis
 
-### 1. CAPM Return Analysis
+* Calculate expected stock returns using CAPM
+* Calculate and analyze Beta
+* Analyze risk-free rate and market return
+* Understand systematic risk
+* Compare expected and historical returns
 
-The CAPM module analyzes expected returns and systematic risk.
+### Stock Market Analysis
 
-It provides metrics such as:
+* Historical stock price analysis
+* Daily return analysis
+* Trading volume analysis
+* Stock performance visualization
+* Multiple stock comparison
+* Historical market data retrieval
 
-* Beta
-* Expected annual return
-* Annual volatility
-* Alpha / excess return
-* Market-relative performance
-* Growth of capital
-* Portfolio-level analytics
+### Technical Indicators
 
-CAPM is calculated using:
+FinSight provides technical analysis using indicators such as:
 
-```text
-Expected Return = Risk-Free Rate + Beta × (Market Return − Risk-Free Rate)
-```
+* **SMA — Simple Moving Average**
+* **RSI — Relative Strength Index**
+* Moving-average trend analysis
+* Price and volume analysis
 
----
+### Portfolio Analysis
 
-### 2. Stock Analysis
+* Analyze multiple stocks
+* Compare stock performance
+* Analyze portfolio returns
+* Compare risk and return
+* Interactive portfolio visualizations
 
-Analyze individual stocks using historical market data.
+### Risk Analysis
 
-Users can select:
+FinSight provides multiple risk-related metrics and visualizations, including:
 
-* Stock ticker
-* Start date
-* End date
-
-The module provides:
-
-* Historical price data
-* Stock performance
-* Company information
-* Financial information
-* Interactive charts
-* Market analysis
-
-Example tickers:
-
-```text
-AAPL
-TSLA
-MSFT
-NVDA
-```
-
----
-
-### 3. AI Stock Price Prediction
-
-The application includes a machine-learning module for stock price forecasting.
-
-Users can configure:
-
-* Stock ticker
-* Historical training period
-* Forecast horizon
-* Machine-learning model
-
-Currently supported model:
-
-* Random Forest Regression
-
-The prediction module can display:
-
-* Current price
-* Predicted price
-* Percentage change
-* Mean Absolute Error (MAE)
-* R² Score
-* Historical price trajectory
-* Forecast visualization
-
-> Machine-learning predictions are estimates based on historical data and should not be interpreted as guaranteed future prices.
-
----
-
-### 4. Technical Analysis
-
-The technical analysis module helps analyze historical price behavior and market trends.
-
-It can be used for:
-
-* Price trend analysis
-* Moving averages
-* Momentum analysis
-* Volatility analysis
-* Technical indicators
-* Historical market behavior
-
----
-
-### 5. Portfolio Analysis
-
-Analyze multiple stocks as a portfolio.
-
-Users can select multiple assets and configure the historical analysis period.
-
-Portfolio analysis can include:
-
-* Portfolio returns
-* Portfolio risk
-* Asset allocation
-* Correlation
-* Diversification
-* Risk-adjusted performance
-
-Example portfolio:
-
-```text
-AAPL
-TSLA
-MSFT
-NVDA
-```
-
----
-
-### 6. Risk Analysis
-
-The application provides visual analysis of the relationship between risk and expected return.
-
-The risk analysis module can be used to examine:
-
-* Expected return
 * Volatility
-* Systematic risk
-* Asset-level risk
-* Portfolio risk
-* Risk-return relationships
+* Beta
+* Historical returns
+* Risk-return analysis
+* Market relationship analysis
 
----
+### Monte Carlo Simulation
 
-### 7. Monte Carlo Simulation
+FinSight uses **Monte Carlo simulation** to generate possible future stock-price scenarios.
 
-The application includes Monte Carlo simulation for generating possible future stock-price paths.
+The simulation can be used to visualize:
 
-General workflow:
+* Possible future price paths
+* Distribution of simulated prices
+* Potential returns
+* Investment uncertainty
+* Risk scenarios
 
-```text
-Historical Market Data
-        ↓
-Return & Volatility Estimation
-        ↓
-Random Simulation
-        ↓
-Multiple Future Price Paths
-        ↓
-Future Price Distribution
-```
+### Interactive Visualizations
 
-Instead of producing one deterministic outcome, Monte Carlo simulation generates multiple possible scenarios based on the assumptions used by the model.
+The dashboard uses **Plotly** to provide interactive financial charts.
 
----
+Users can explore:
+
+* Stock prices
+* Returns
+* Trading volume
+* Technical indicators
+* Portfolio performance
+* Risk metrics
+* Monte Carlo simulations
 
 ## Technology Stack
 
-### Programming Language
+| Category           | Technologies                       |
+| ------------------ | ---------------------------------- |
+| Language           | Python                             |
+| Framework          | Streamlit                          |
+| Data Analysis      | Pandas, NumPy                      |
+| Financial Data     | yFinance                           |
+| Visualization      | Plotly                             |
+| Financial Models   | CAPM, Beta, Monte Carlo Simulation |
+| Technical Analysis | RSI, SMA                           |
 
-* Python
-
-### Framework
-
-* Streamlit
-
-### Data Analysis
-
-* Pandas
-* NumPy
-
-### Data Visualization
-
-* Plotly
-
-### Financial Data
-
-* yfinance
-
-### Machine Learning
-
-* Scikit-learn
-* Random Forest Regression
-
-### Financial Models
-
-* Capital Asset Pricing Model (CAPM)
-* Portfolio Analysis
-* Technical Analysis
-* Risk Analysis
-* Monte Carlo Simulation
-
----
-
-## Project Structure
+## Project Architecture
 
 ```text
-Capm_Web_Application/
+FinSight
 │
 ├── app.py
 ├── CAPM_functions.py
 ├── requirements.txt
 ├── README.md
-├── .gitignore
-│
-├── pages/
-│   ├── capm_return.py
-│   ├── stock_analysis.py
-│   ├── stock_prediction.py
-│   └── trading_app.py
-│
-├── assets/
-│   └── ...
-│
-└── ...
+└── other project files
 ```
 
-> The exact structure may vary depending on the current version of the project.
+## Application Workflow
 
----
+```text
+        Stock Selection
+              ↓
+      Historical Market Data
+              ↓
+       Data Processing
+              ↓
+    ┌─────────┴─────────┐
+    ↓                   ↓
+CAPM Analysis     Technical Analysis
+    ↓                   ↓
+    └─────────┬─────────┘
+              ↓
+       Risk & Portfolio
+           Analysis
+              ↓
+      Monte Carlo Simulation
+              ↓
+     Interactive Dashboard
+```
+
+## CAPM Model
+
+FinSight implements the standard Capital Asset Pricing Model:
+
+```text
+Expected Return = Risk-Free Rate + Beta × (Market Return - Risk-Free Rate)
+```
+
+### Parameters
+
+**Risk-Free Rate**
+
+The theoretical return of an investment with negligible risk.
+
+**Beta**
+
+Measures the sensitivity of a stock's returns relative to the overall market.
+
+**Market Return**
+
+Represents the return of the broader market.
+
+## Data Source
+
+FinSight retrieves historical stock-market data using the **yFinance** Python library.
+
+The availability of historical market data depends on the underlying data provider.
 
 ## Installation
 
-### 1. Clone the Repository
+Clone the repository:
 
 ```bash
-git clone https://github.com/Nikunj-Saini/Capm_Web_Application.git
+git clone https://github.com/Nikunj-Saini/CAPM-Web-Application.git
 ```
 
 Navigate to the project directory:
 
 ```bash
-cd Capm_Web_Application
+cd CAPM-Web-Application
 ```
 
----
-
-### 2. Create a Virtual Environment
-
-#### Windows
-
-```powershell
-python -m venv venv
-venv\Scripts\activate
-```
-
-#### macOS / Linux
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
----
-
-### 3. Install Dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-If `requirements.txt` is not available:
-
-```bash
-pip install streamlit pandas numpy scikit-learn plotly yfinance
-```
-
----
-
-## Run the Application
-
-Start the Streamlit application:
+Run the application:
 
 ```bash
 streamlit run app.py
 ```
 
-The application will normally open at:
+The application will be available at:
 
 ```text
 http://localhost:8501
 ```
 
----
+## Deployment
 
-## How to Use
+FinSight is deployed using **Streamlit Community Cloud**.
 
-### Step 1 — Select a Module
+**Live Application:**
 
-Use the application navigation to select the required analysis module.
+https://capm-dashboard-nikunj.streamlit.app/
 
-Available modules may include:
+## Future Enhancements
 
-```text
-CAPM Return
-Stock Analysis
-Stock Prediction
-Trading App
-```
-
-### Step 2 — Select Assets
-
-Enter stock tickers such as:
-
-```text
-AAPL
-TSLA
-MSFT
-NVDA
-```
-
-### Step 3 — Configure Parameters
-
-Depending on the selected module, configure:
-
-* Historical period
-* Start date
-* End date
-* Forecast horizon
-* Training period
-* Portfolio assets
-* Machine-learning model
-
-### Step 4 — Analyze
-
-Run the selected analysis to generate financial metrics, visualizations, simulations, and forecasts.
-
----
-
-## Important Financial Metrics
-
-### Beta
-
-Beta measures an asset's sensitivity to movements in the broader market.
-
-```text
-β > 1  → Higher market sensitivity
-β = 1  → Approximately market-level sensitivity
-β < 1  → Lower market sensitivity
-```
-
-### Alpha
-
-Alpha represents excess return relative to a specified benchmark or model-implied return, depending on the calculation used.
-
-### Volatility
-
-Volatility measures the variability of historical returns and is commonly used as an indicator of market risk.
-
-### Mean Absolute Error
-
-MAE measures the average absolute difference between predicted and actual values.
-
-```text
-MAE = Average(|Actual − Predicted|)
-```
-
-Lower MAE generally indicates smaller prediction errors on the evaluated dataset.
-
-### R² Score
-
-R² measures the proportion of variance in the target variable explained by the model on the evaluated dataset.
-
----
-
-## Machine Learning Pipeline
-
-The stock prediction module follows a general workflow:
-
-```text
-Historical Market Data
-        ↓
-Data Cleaning
-        ↓
-Feature Engineering
-        ↓
-Train / Test Data
-        ↓
-Random Forest Regression
-        ↓
-Model Evaluation
-        ↓
-Future Forecast
-        ↓
-Interactive Visualization
-```
-
-Model performance can vary depending on:
-
-* Stock selected
-* Historical period
-* Market conditions
-* Forecast horizon
-* Feature selection
-* Data quality
-
----
-
-## Visualizations
-
-The application uses interactive Plotly visualizations for financial analysis.
-
-Visualizations may include:
-
-* Historical stock prices
-* Forecast trajectories
-* Relative performance
-* Growth of capital
-* Portfolio metrics
-* Risk-return relationships
-* Monte Carlo simulations
-* Technical indicators
-
-Plotly provides interactive features such as:
-
-* Zoom
-* Pan
-* Hover information
-* Range selection
-
----
-
-## Data Source
-
-Historical market data is retrieved using **Yahoo Finance through the `yfinance` Python library**.
-
-Market data availability and historical values may change over time.
-
----
+* Portfolio optimization
+* Efficient Frontier analysis
+* Sharpe Ratio
+* Sortino Ratio
+* Advanced risk metrics
+* Additional technical indicators
+* Machine-learning-based price prediction
+* Portfolio backtesting
+* Database integration
+* User portfolio management
+* Real-time market data integration
 
 ## Disclaimer
 
-This project is intended for **educational, research, and analytical purposes only**.
-
-The financial calculations, simulations, metrics, and machine-learning predictions generated by this application should **not be considered financial, investment, or trading advice**.
-
-Machine-learning models and financial models rely on historical data, statistical relationships, and assumptions. Past performance does not guarantee future results.
-
-Users should conduct their own research and consult an appropriately qualified financial professional before making investment decisions.
-
----
-
-## Future Improvements
-
-Potential future enhancements include:
-
-* Additional machine-learning models
-* LSTM-based forecasting
-* Transformer-based forecasting
-* Advanced portfolio optimization
-* Real-time market data
-* Options analytics
-* Value at Risk (VaR)
-* Conditional VaR / Expected Shortfall
-* Sharpe Ratio
-* Sortino Ratio
-* Efficient Frontier
-* Portfolio rebalancing
-* Advanced backtesting
-* User authentication
-* Cloud deployment
-* Downloadable financial reports
-
----
+FinSight is developed for **educational and analytical purposes only**. The information and calculations provided by the application should not be considered financial advice or an investment recommendation.
 
 ## Author
 
 **Nikunj Saini**
 
-B.Tech in Artificial Intelligence and Data Science
+B.Tech — Artificial Intelligence & Data Science
 
-GitHub:
+**GitHub:**
 https://github.com/Nikunj-Saini
 
----
-
-## Contributing
-
-Contributions, suggestions, and improvements are welcome.
-
-Create a feature branch:
-
-```bash
-git checkout -b feature/new-feature
-```
-
-Add your changes:
-
-```bash
-git add .
-```
-
-Commit your changes:
-
-```bash
-git commit -m "Add new feature"
-```
-
-Push the branch:
-
-```bash
-git push origin feature/new-feature
-```
-
-Then create a Pull Request.
-
----
-
-## License
-
-This project is intended for educational and research purposes.
-
-If an open-source license is added to the repository, its terms will apply to the project.
-
----
-
-## Project Highlights
-
-**An end-to-end quantitative finance dashboard combining CAPM analysis, stock analytics, portfolio analysis, technical analysis, risk analytics, Monte Carlo simulation, and machine-learning-based stock forecasting.**
+**Portfolio:**
+https://nikunjsaini.netlify.app/
