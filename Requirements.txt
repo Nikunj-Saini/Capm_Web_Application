@@ -1,9 +1,9 @@
-pandas
+streamlit
 numpy
-matplotlib 
-seaborn  
-scikit-learn   
-jupyter   
- 
-  
- 
+pandas
+pandas_ta
+plotly
+python_dateutil
+scikit_learn
+ta
+yfinance
